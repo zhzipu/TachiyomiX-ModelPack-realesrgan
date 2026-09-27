@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "realesrgan",
+  "name": "Real-ESRGAN 模型",
+  "models": [
+    {
+      "key": "realesrgan",
+      "name": "Real-ESRGAN",
+      "engine": "realesrgan",
+      "assetPath": "realesrgan-models/v3-anime",
+      "scales": [2, 3, 4],
+      "denoiseLevels": [],
+      "precisions": [0, 1, 2, 3],
+      "supportsNpu": true,
+      "npuScales": [2],
+      "defaults": { "scale": 2, "style": 0, "precision": 0 },
+      "defaultStyle": 0,
+      "styles": [
+        {
+          "value": 0,
+          "name": "Anime",
+          "assetPath": "realesrgan-models/v3-anime",
+          "scales": [2, 3, 4]
+        },
+        {
+          "value": 1,
+          "name": "Photo",
+          "assetPath": "realesrgan-models/v3-general",
+          "scales": [2],
+          "modelScale": 4
+        }
+      ]
+    }
+  ],
+  "options": {
+    "preloadPages": [1, 2, 3, 5, 8],
+    "gpuPerformanceModes": [0, 1, 2],
+    "tileSizes": [64, 96, 128, 192, 256],
+    "maxProcessingResolution": { "width": 1600, "height": 1600 },
+    "maxResolution": { "width": 0, "height": 0 },
+    "fp16Arithmetic": true
+  }
+}
